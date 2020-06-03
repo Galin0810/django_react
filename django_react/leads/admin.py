@@ -1,3 +1,7 @@
+from .models import Lead
 from django.contrib import admin
 
-# Register your models here.
+
+@admin.register(Lead)
+class AuthorAdmin(admin.ModelAdmin):
+    pass
