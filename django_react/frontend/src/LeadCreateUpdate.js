@@ -14,6 +14,9 @@ class LeadCreateUpdate extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
       }
 
+  btnStyle = {
+		backgroundColor: 'lightseagreen'
+	}
 
       componentDidMount(){
         const { match: { params } } = this.props;
@@ -93,7 +96,7 @@ class LeadCreateUpdate extends Component {
               <input className="form-control" type="text" ref={this.message}/>
 
 
-            <input className="btn btn-primary" type="submit" value="Submit" />
+            <input className="btn btn-primary" style={this.btnStyle} type="submit" value="Submit" />
             </div>
           </form>
         );

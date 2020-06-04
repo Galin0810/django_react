@@ -41,6 +41,9 @@ nextPage(){
         self.setState({ leads:  result, nextPageURL:  result.nextlink})
     });
 }
+btnStyle = {
+		backgroundColor: 'lightseagreen'
+	}
 render() {
 
     return (
@@ -65,12 +68,12 @@ render() {
 
                 <td>
                 <button  onClick={(e)=>  this.handleDelete(e,c.id) }> Delete</button>
-                <a  href={"/leads/" + c.id}> Update</a>
+                <a  href={"/leads/" + c.id} > Update</a>
                 </td>
             </tr>)}
             </tbody>
             </table>
-            <button  className="btn btn-primary"  onClick=  {  this.nextPage  }>Next</button>
+            <button className="btn btn-primary" style={this.btnStyle} onClick=  {  this.nextPage  }>Next</button>
         </div>
         );
   }
